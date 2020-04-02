@@ -29,6 +29,16 @@ class LoginPage {
   get invalidLoginErrorText() {
     return $('.notValid');
   }
+  /**
+   *
+   * @param {*} username
+   * @param {*} password
+   */
+  login(username, password) {
+    this.usernameField.setValue(username);
+    this.passwordField.setValue(password);
+    this.loginButton.click();
+  }
 }
 
 module.exports = new LoginPage();
